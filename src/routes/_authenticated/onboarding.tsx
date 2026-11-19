@@ -298,7 +298,7 @@ function Onboarding() {
             <div className="launch-preview-cover" />
             <div className="launch-preview-body">
               <div className="launch-preview-logo">
-                {draft.logo_url ? <img src={mediaUrl(draft.logo_url)} alt="" /> : getInitials(draft.name)}
+                {draft.logo_url ? <img src={mediaUrl(draft.logo_url) ?? undefined} alt="" /> : getInitials(draft.name)}
               </div>
               <div className="mt-3 space-y-2">
                 {reached(0) ? <p className="launch-reveal font-semibold text-foreground truncate" data-on="true">{draft.name}</p> : <div className="launch-skeleton w-1/2" />}
